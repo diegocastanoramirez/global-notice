@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+
+<section class="banner">
+
+    <div class="overlay">
+
+        <div class="contenido">
+
+            <span class="etiqueta">
+                BIENVENIDO A
+            </span>
+
+            <h1>
+                Global<span>Notice</span>
+            </h1>
+
+            <h2>
+                Las noticias que conectan
+                el mundo contigo
+            </h2>
+
+            <p>
+                Tecnología, educación, turismo y
+                negocios en un solo lugar.
+            </p>
+
+            <button>
+                Explorar Noticias
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="destacadas">
+
+  <div class="titulo-section">
+
+      <h2>
+          Noticias Destacadas
+      </h2>
+
+  </div>
+
+<div class="contenedor">
+
+    <app-noticia-card
+        *ngFor="let noticia of noticias"
+        [noticia]="noticia">
+    </app-noticia-card>
+
+</div>
+
+</section>
+
+Total noticias: {{ noticias.length }}
+<app-footer></app-footer>

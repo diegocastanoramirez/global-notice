@@ -1,0 +1,35 @@
+<div class="card">
+
+    <img
+        [src]="noticia.imagen"
+        [alt]="noticia.titulo">
+
+    <p style="color:red">
+        {{ noticia.imagen }}
+    </p>
+
+    <div class="card-body">
+
+        <span class="categoria">
+            {{ noticia.categoria }}
+        </span>
+
+        <h3>
+            {{ noticia.titulo }}
+        </h3>
+
+        <p>
+            {{ noticia.descripcion }}
+        </p>
+
+        <div class="acciones">
+
+            <button class="btn-detalle">
+                Ver más
+            </button>
+
+        </div>
+
+    </div>
+
+</div>

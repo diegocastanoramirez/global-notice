@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "categoria": "Tecnología",
+    "titulo": "La inteligencia artificial transforma el futuro del trabajo",
+    "descripcion": "La IA está revolucionando el mercado laboral.",
+    "fecha": "15/04/2025",
+    "imagen": "/images/noticia1.jpg",
+    "destacado": true
+  },
+  {
+    "id": 2,
+    "categoria": "Educación",
+    "titulo": "La educación digital abre nuevas oportunidades",
+    "descripcion": "Las plataformas virtuales están creciendo.",
+    "fecha": "12/04/2025",
+    "imagen": "/images/noticia2.jpg",
+    "destacado": true
+  },
+  {
+    "id": 3,
+    "categoria": "Turismo",
+    "titulo": "Colombia sorprende al mundo",
+    "descripcion": "Destinos turísticos con gran crecimiento.",
+    "fecha": "10/04/2025",
+    "imagen": "/images/noticia3.jpg",
+    "destacado": true
+  }
+]

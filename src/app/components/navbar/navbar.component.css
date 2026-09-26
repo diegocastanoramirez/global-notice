@@ -1,0 +1,76 @@
+.navbar{
+    height: 70px;
+    background: #012552;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 40px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img{
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+}
+
+.logo-texto{
+    display: flex;
+    flex-direction: column;
+}
+
+.logo h2{
+    margin: 0;
+    color: white;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.logo span{
+    color: #ff2d55;
+}
+
+.logo small{
+    color: white;
+    opacity: 0.8;
+    font-size: 12px;
+}
+
+.menu{
+    display: flex;
+    gap: 30px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.menu li:hover{
+    color: #ff2d55;
+}
+
+.buscador input{
+    width: 230px;
+    height: 40px;
+
+    border: none;
+    border-radius: 25px;
+
+    padding: 0 15px;
+
+    outline: none;
+}
