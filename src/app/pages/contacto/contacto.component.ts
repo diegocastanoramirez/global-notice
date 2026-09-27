@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 import {
   FormBuilder,
   FormGroup,
@@ -12,7 +14,9 @@ import {
   standalone: true,
   imports: [
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NavbarComponent,
+    FooterComponent
   ],
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css'
@@ -27,11 +31,12 @@ export class ContactoComponent {
     private fb: FormBuilder
   ) {
 
-    this.formulario = this.fb.group({
-      nombre: ['', Validators.required],
-      correo: ['', [Validators.required, Validators.email]],
-      mensaje: ['', Validators.required]
-    });
+  this.formulario = this.fb.group({
+    nombre: ['', Validators.required],
+    correo: ['', [Validators.required, Validators.email]],
+    asunto: ['', Validators.required],
+    mensaje: ['', Validators.required]
+  });
 
   }
 
