@@ -114,16 +114,14 @@
 
 .destacadas {
 
-    padding: 70px 60px;
+    padding: 60px 30px;
 
     background: #f5f7fa;
 }
 
 .titulo-section {
 
-    text-align: center;
-
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .titulo-section h2 {
@@ -135,23 +133,27 @@
     font-weight: 700;
 
     margin: 0;
+
+    text-align: left;
 }
 
 .contenedor {
 
-    display: flex;
+    display: grid;
 
-    justify-content: center;
-
-    align-items: stretch;
+    grid-template-columns: repeat(4, 1fr);
 
     gap: 25px;
 
-    flex-wrap: wrap;
+    width: 100%;
+}
 
-    max-width: 1700px;
+@media screen and (max-width: 1400px) {
 
-    margin: 0 auto;
+    .contenedor {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -179,15 +181,16 @@
 
     .destacadas {
 
-        padding: 50px 60px 10px 60px;
-
-        background: #f5f7fa;
-
-        margin-bottom: 0;
+        padding: 40px 20px;
     }
-    
+
     .titulo-section h2 {
 
         font-size: 36px;
+    }
+
+    .contenedor {
+
+        grid-template-columns: 1fr;
     }
 }
