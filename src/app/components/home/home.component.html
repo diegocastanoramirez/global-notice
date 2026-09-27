@@ -14,14 +14,13 @@
                 Global<span>Notice</span>
             </h1>
 
-            <h2>
-                Las noticias que conectan
-                el mundo contigo
-            </h2>
+                <h2>
+                    Las noticias que conectan
+                    el mundo contigo
+                </h2>
 
             <p>
-                Tecnología, educación, turismo y
-                negocios en un solo lugar.
+                Tecnología, educación, turismo y negocios en un solo lugar.
             </p>
 
             <button>
@@ -36,24 +35,22 @@
 
 <section class="destacadas">
 
-  <div class="titulo-section">
+    <div class="titulo-section">
 
-      <h2>
-          Noticias Destacadas
-      </h2>
+        <h2>
+            Noticias Destacadas
+        </h2>
 
-  </div>
+    </div>
 
-<div class="contenedor">
+    <div class="contenedor">
+        <app-noticia-card
+            *ngFor="let noticia of noticias"
+            [noticia]="noticia">
+        </app-noticia-card>
 
-    <app-noticia-card
-        *ngFor="let noticia of noticias"
-        [noticia]="noticia">
-    </app-noticia-card>
-
-</div>
+    </div>
 
 </section>
 
-Total noticias: {{ noticias.length }}
 <app-footer></app-footer>

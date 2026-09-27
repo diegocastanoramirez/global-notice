@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NavbarComponent } from '../navbar/navbar.component';
@@ -22,36 +22,29 @@ import { Noticia } from '../../models/noticia';
 })
 export class HomeComponent implements OnInit {
 
-noticias: Noticia[] = [];
+  noticias: Noticia[] = [];
 
   constructor(
-    private noticiasService: NoticiasService
+    private noticiasService: NoticiasService,
+    private cdr: ChangeDetectorRef
   ) {}
 
-ngOnInit(): void {
+  ngOnInit(): void {
 
-  this.noticiasService
-    .obtenerNoticias()
-    .subscribe({
-      next: (data) => {
+    this.noticiasService
+      .obtenerNoticias()
+      .subscribe({
+        next: (data) => {
 
-      console.log('Datos recibidos:', data);
+          this.noticias = data;
 
-      console.log('Es array:', Array.isArray(data));
+          this.cdr.detectChanges();
 
-      console.log('Length data:', data.length);
+        },
+        error: (error) => {
+          console.error('Error cargando JSON:', error);
+        }
+      });
 
-      this.noticias = [...data];
-
-      console.log('Length noticias:', this.noticias.length);
-
-    },
-      error: (error) => {
-        console.error('Error cargando JSON:', error);
-      }
-    });
-
+  }
 }
-
-}
-

@@ -126,11 +126,13 @@
     margin: 0;
 }
 
-.contenedor{
+.contenedor {
 
     display: flex;
 
-    gap: 25px;
+    justify-content: center;
+
+    gap: 30px;
 
     flex-wrap: wrap;
 }
