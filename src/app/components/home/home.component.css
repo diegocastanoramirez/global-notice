@@ -145,9 +145,13 @@
 
     align-items: stretch;
 
-    gap: 35px;
+    gap: 25px;
 
     flex-wrap: wrap;
+
+    max-width: 1700px;
+
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {

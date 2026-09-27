@@ -34,23 +34,5 @@
     "fecha": "15/04/2025",
     "imagen": "/images/noticia4.jpg",
     "destacado": true
-  },
-  {
-    "id": 5,
-    "categoria": "Educación",
-    "titulo": "La educación digital abre nuevas oportunidades",
-    "descripcion": "Las plataformas virtuales están creciendo.",
-    "fecha": "12/04/2025",
-    "imagen": "/images/noticia5.jpg",
-    "destacado": true
-  },
-  {
-    "id": 6,
-    "categoria": "Turismo",
-    "titulo": "Colombia sorprende al mundo",
-    "descripcion": "Destinos turísticos con gran crecimiento.",
-    "fecha": "10/04/2025",
-    "imagen": "/images/noticia6.jpg",
-    "destacado": true
   }
 ]
