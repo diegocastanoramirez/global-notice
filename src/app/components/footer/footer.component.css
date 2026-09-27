@@ -1,6 +1,80 @@
-footer{
-  background:#012552;
-  color:white;
-  text-align:center;
-  padding:30px;
+footer {
+
+    background: #012552;
+
+    color: white;
+
+    margin-top: 30px;
+
+    padding: 25px 0;
+}
+
+.footer-contenido {
+
+    width: 100%;
+
+    max-width: 1400px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+.footer-contenido h2 {
+
+    margin: 0;
+
+    font-size: 38px;
+
+    font-weight: 700;
+}
+
+.footer-contenido span {
+
+    color: #ff2d55;
+}
+
+.slogan {
+
+    margin-top: 8px;
+
+    font-size: 15px;
+
+    color: rgba(255,255,255,.85);
+}
+
+.footer-menu {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    margin: 20px 0;
+}
+
+.footer-menu span {
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.footer-menu span:hover {
+
+    color: #ff2d55;
+}
+
+.copyright {
+
+    font-size: 14px;
+
+    color: rgba(255,255,255,.8);
 }

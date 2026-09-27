@@ -1,76 +1,164 @@
-.navbar{
-    height: 70px;
+.navbar {
+
+    height: 120px;
+
     background: #012552;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
-    padding: 0 40px;
+    padding: 0 50px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 
-.logo{
+.logo {
+
     display: flex;
+
     align-items: center;
-    gap: 12px;
+
+    gap: 18px;
+
+    min-width: 320px;
 }
 
-.logo img{
-    width: 55px;
-    height: 55px;
+.logo img {
+
+    width: 130px;
+
+    height: auto;
+
     object-fit: contain;
 }
 
-.logo-texto{
+.logo-texto {
+
     display: flex;
+
     flex-direction: column;
 }
 
-.logo h2{
+.logo h2 {
+
     margin: 0;
+
     color: white;
-    font-size: 20px;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
     line-height: 1;
 }
 
-.logo span{
+.logo span {
+
     color: #ff2d55;
 }
 
-.logo small{
-    color: white;
-    opacity: 0.8;
-    font-size: 12px;
+.logo small {
+
+    color: rgba(255,255,255,.85);
+
+    font-size: 15px;
+
+    margin-top: 4px;
 }
 
-.menu{
+.menu {
+
     display: flex;
-    gap: 30px;
+
+    gap: 40px;
 
     list-style: none;
+
     margin: 0;
+
     padding: 0;
 }
 
-.menu li{
+.menu li {
+
     color: white;
+
     cursor: pointer;
-    font-size: 15px;
-    transition: 0.3s;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    transition: .3s;
 }
 
-.menu li:hover{
+.menu li:hover {
+
     color: #ff2d55;
 }
 
-.buscador input{
-    width: 230px;
-    height: 40px;
+.buscador input {
 
-    border: none;
-    border-radius: 25px;
+    width: 320px;
 
-    padding: 0 15px;
+    height: 52px;
+
+    border-radius: 30px;
+
+    border: 1px solid rgba(255,255,255,.25);
+
+    background: rgba(255,255,255,.18);
+
+    color: white;
+
+    padding: 0 22px;
 
     outline: none;
+
+    font-size: 15px;
+
+    transition: .3s;
+}
+
+.buscador input::placeholder {
+
+    color: rgba(255,255,255,.85);
+}
+
+.buscador input:focus {
+
+    border-color: #ff2d55;
+
+    background: rgba(255,255,255,.25);
+}
+
+@media screen and (max-width: 1200px) {
+
+    .logo img {
+
+        width: 100px;
+    }
+
+    .logo h2 {
+
+        font-size: 28px;
+    }
+
+    .menu {
+
+        gap: 20px;
+    }
+
+    .menu li {
+
+        font-size: 15px;
+    }
+
+    .buscador input {
+
+        width: 220px;
+    }
 }
