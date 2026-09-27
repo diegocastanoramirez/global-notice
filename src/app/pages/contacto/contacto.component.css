@@ -1,0 +1,112 @@
+.contenedor-contacto {
+
+    max-width: 800px;
+
+    margin: 60px auto;
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.12);
+}
+
+.titulo {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
+.titulo h1 {
+
+    color: #012552;
+
+    margin-bottom: 10px;
+}
+
+.titulo p {
+
+    color: #666;
+}
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.campo label {
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.campo input,
+.campo textarea {
+
+    padding: 12px;
+
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.campo small {
+
+    color: red;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+}
+
+button {
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+button:hover {
+
+    background: #e61e4d;
+}
+
+.confirmacion {
+
+    margin-top: 20px;
+
+    text-align: center;
+
+    color: green;
+
+    font-weight: bold;
+}
