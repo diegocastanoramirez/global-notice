@@ -20,8 +20,18 @@
 
         <div class="acciones">
 
+            <button
+                class="btn-favorito"
+                (click)="toggleFavorito()">
+
+                {{ esFavorito ? '❤️ Guardado' : '🤍 Favorito' }}
+
+            </button>
+
             <button class="btn-detalle">
+
                 Ver más
+
             </button>
 
         </div>
