@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<section class="banner-favoritos">
+
+    <div class="overlay-favoritos">
+
+        <div class="contenido-favoritos">
+
+            <h1>Mis Favoritos</h1>
+
+            <p>
+                Aquí encontrarás las noticias que has guardado.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="contenedor-favoritos">
+
+    <h2>Noticias guardadas</h2>
+
+    <div
+        class="sin-favoritos"
+        *ngIf="favoritos.length === 0">
+
+        No tienes noticias guardadas todavía.
+
+    </div>
+
+    <div
+        class="grid-favoritos"
+        *ngIf="favoritos.length > 0">
+
+        <app-noticia-card
+            *ngFor="let noticia of favoritos"
+            [noticia]="noticia">
+        </app-noticia-card>
+
+    </div>
+
+</section>
+
+<app-footer></app-footer>
