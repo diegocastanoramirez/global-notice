@@ -55,28 +55,130 @@
 
 .contenedor-principal {
 
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    gap: 30px;
+
     background: #f5f7fa;
 
-    padding: 50px 30px;
+    padding: 40px;
 }
 
-.contenedor-principal h2 {
+.sidebar {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    height: fit-content;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.1);
+}
+
+.sidebar h3 {
 
     color: #012552;
 
-    margin-bottom: 30px;
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+.sidebar hr {
+
+    margin: 20px 0;
+
+    border: none;
+
+    border-top: 1px solid #ddd;
+}
+
+.sidebar button {
+
+    width: 100%;
+
+    border: none;
+
+    background: #f2f4f8;
+
+    padding: 12px 15px;
+
+    margin-bottom: 10px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    text-align: left;
+
+    font-size: 14px;
+}
+
+.sidebar button:hover {
+
+    background: #ff2d55;
+
+    color: white;
+}
+
+.sidebar button.activa {
+
+    background: #ff2d55;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+.sidebar select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 14px;
+}
+
+.contenido {
+
+    width: 100%;
+}
+
+.contenido h2 {
+
+    color: #012552;
+
+    margin-bottom: 25px;
 }
 
 .contenedor-noticias {
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
 
     gap: 25px;
 }
 
-@media (max-width: 1400px) {
+@media screen and (max-width: 1400px) {
 
     .contenedor-noticias {
 
@@ -84,15 +186,33 @@
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 900px) {
+
+    .contenedor-principal {
+
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+
+        width: 100%;
+    }
 
     .contenedor-noticias {
 
         grid-template-columns: 1fr;
     }
+}
+
+@media screen and (max-width: 768px) {
 
     .contenido-noticias h1 {
 
         font-size: 40px;
+    }
+
+    .contenido-noticias {
+
+        margin-left: 30px;
     }
 }

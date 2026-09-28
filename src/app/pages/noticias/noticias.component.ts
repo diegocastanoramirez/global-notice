@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { NavbarComponent } from '../../components/navbar/navbar.component';
@@ -7,7 +7,6 @@ import { NoticiaCardComponent } from '../../components/noticia-card/noticia-card
 
 import { NoticiasService } from '../../services/noticias.service';
 import { Noticia } from '../../models/noticia';
-import { ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-noticias',
@@ -25,10 +24,16 @@ export class NoticiasComponent implements OnInit {
 
   noticias: Noticia[] = [];
 
-constructor(
-  private noticiasService: NoticiasService,
-  private cdr: ChangeDetectorRef
-) {}
+  noticiasFiltradas: Noticia[] = [];
+
+  categoriaSeleccionada = 'Todas';
+
+  fechaSeleccionada = 'Todas';
+
+  constructor(
+    private noticiasService: NoticiasService,
+    private cdr: ChangeDetectorRef
+  ) {}
 
   ngOnInit(): void {
 
@@ -36,16 +41,71 @@ constructor(
       .obtenerNoticias()
       .subscribe({
         next: (data) => {
- 
+
           this.noticias = data;
-           
+
+          this.noticiasFiltradas = data;
+
           this.cdr.detectChanges();
-         
+
         },
         error: (error) => {
           console.error(error);
         }
       });
+
+  }
+
+  filtrar(categoria: string): void {
+
+    this.categoriaSeleccionada = categoria;
+
+    this.aplicarFiltros();
+
+  }
+
+  filtrarFecha(event: Event): void {
+
+    const select = event.target as HTMLSelectElement;
+
+    this.fechaSeleccionada = select.value;
+
+    this.aplicarFiltros();
+
+  }
+
+  aplicarFiltros(): void {
+
+    let resultado = this.noticias;
+
+    if (this.categoriaSeleccionada !== 'Todas') {
+
+      resultado = resultado.filter(
+        noticia =>
+          noticia.categoria === this.categoriaSeleccionada
+      );
+
+    }
+
+  if (this.fechaSeleccionada !== 'Todas') {
+
+    resultado = resultado.filter(
+      noticia => noticia.fecha.includes(
+        '/' + this.fechaSeleccionada + '/2025'
+      )
+    );
+
+  }
+
+    this.noticiasFiltradas = resultado;
+
+  }
+
+  totalCategoria(categoria: string): number {
+
+    return this.noticias.filter(
+      noticia => noticia.categoria === categoria
+    ).length;
 
   }
 

@@ -23,25 +23,113 @@
 
     </div>
 
-
 </section>
 
 <section class="contenedor-principal">
 
-    <h2>
-        Mostrando {{ noticias.length }} noticias
-    </h2>
+    <aside class="sidebar">
 
-    <div class="contenedor-noticias">
+        <h3>Categorías</h3>
 
-        <app-noticia-card
-            *ngFor="let noticia of noticias"
-            [noticia]="noticia">
-        </app-noticia-card>
+        <button
+            [class.activa]="categoriaSeleccionada === 'Todas'"
+            (click)="filtrar('Todas')">
+
+            📋 Todas ({{ noticias.length }})
+
+        </button>
+
+        <button
+            [class.activa]="categoriaSeleccionada === 'Tecnología'"
+            (click)="filtrar('Tecnología')">
+
+            💻 Tecnología ({{ totalCategoria('Tecnología') }})
+
+        </button>
+
+        <button
+            [class.activa]="categoriaSeleccionada === 'Educación'"
+            (click)="filtrar('Educación')">
+
+            🎓 Educación ({{ totalCategoria('Educación') }})
+
+        </button>
+
+        <button
+            [class.activa]="categoriaSeleccionada === 'Turismo'"
+            (click)="filtrar('Turismo')">
+
+            ✈ Turismo ({{ totalCategoria('Turismo') }})
+
+        </button>
+
+        <button
+            [class.activa]="categoriaSeleccionada === 'Negocios'"
+            (click)="filtrar('Negocios')">
+
+            📈 Negocios ({{ totalCategoria('Negocios') }})
+
+        </button>
+
+        <hr>
+
+        <h3>Filtrar por fecha</h3>
+
+        <select (change)="filtrarFecha($event)">
+
+            <option value="Todas">
+                Todas las fechas
+            </option>
+
+            <option value="04">
+                Abril 2025
+            </option>
+
+            <option value="05">
+                Mayo 2025
+            </option>
+
+            <option value="06">
+                Junio 2025
+            </option>
+
+            <option value="07">
+                Julio 2025
+            </option>
+
+            <option value="08">
+                Agosto 2025
+            </option>
+
+            <option value="09">
+                Septiembre 2025
+            </option>
+
+            <option value="10">
+                Octubre 2025
+            </option>
+
+        </select>
+
+    </aside>
+
+    <div class="contenido">
+
+        <h2>
+            Mostrando {{ noticiasFiltradas.length }} noticias
+        </h2>
+
+        <div class="contenedor-noticias">
+
+            <app-noticia-card
+                *ngFor="let noticia of noticiasFiltradas"
+                [noticia]="noticia">
+            </app-noticia-card>
+
+        </div>
 
     </div>
 
-    
 </section>
 
 <app-footer></app-footer>

@@ -4,6 +4,8 @@
     "categoria": "Tecnología",
     "titulo": "La inteligencia artificial transforma el futuro del trabajo",
     "descripcion": "La IA está revolucionando el mercado laboral.",
+    "contenido": "La inteligencia artificial continúa impulsando la transformación digital de las empresas. Cada vez más organizaciones integran modelos inteligentes para automatizar procesos, optimizar recursos y mejorar la experiencia de los usuarios.",
+    "autor": "GlobalNotice",
     "fecha": "15/04/2025",
     "imagen": "/images/noticia1.jpg",
     "destacado": false
@@ -13,6 +15,8 @@
     "categoria": "Educación",
     "titulo": "La educación digital abre nuevas oportunidades",
     "descripcion": "Las plataformas virtuales están creciendo.",
+    "contenido": "La educación digital está permitiendo que estudiantes de diferentes regiones accedan a contenido especializado sin necesidad de desplazamientos físicos, ampliando las oportunidades de formación.",
+    "autor": "GlobalNotice",
     "fecha": "12/04/2025",
     "imagen": "/images/noticia2.jpg",
     "destacado": true
@@ -22,17 +26,65 @@
     "categoria": "Turismo",
     "titulo": "Colombia sorprende al mundo",
     "descripcion": "Destinos turísticos con gran crecimiento.",
-    "fecha": "10/04/2025",
+    "contenido": "Diversos destinos colombianos están registrando un crecimiento sostenido gracias a nuevas rutas turísticas y a la promoción internacional de experiencias culturales y naturales.",
+    "autor": "GlobalNotice",
+    "fecha": "10/05/2025",
     "imagen": "/images/noticia3.jpg",
     "destacado": true
   },
- {
+  {
     "id": 4,
     "categoria": "Tecnología",
     "titulo": "La inteligencia artificial y sus avances",
     "descripcion": "La IA está revolucionando el mercado laboral.",
-    "fecha": "15/04/2025",
+    "contenido": "Nuevos avances en modelos generativos están acelerando la adopción de soluciones basadas en inteligencia artificial en diferentes sectores económicos.",
+    "autor": "GlobalNotice",
+    "fecha": "15/06/2025",
     "imagen": "/images/noticia4.jpg",
     "destacado": true
+  },
+  {
+    "id": 5,
+    "categoria": "Negocios",
+    "titulo": "El emprendimiento impulsa la economía global",
+    "descripcion": "Nuevas empresas generan empleo y crecimiento.",
+    "contenido": "Los emprendimientos tecnológicos y comerciales continúan generando nuevas oportunidades laborales, fortaleciendo la economía y promoviendo la innovación empresarial.",
+    "autor": "GlobalNotice",
+    "fecha": "05/07/2025",
+    "imagen": "/images/noticia5.jpg",
+    "destacado": true
+  },
+  {
+    "id": 6,
+    "categoria": "Educación",
+    "titulo": "Nuevas habilidades para un mundo en constante cambio",
+    "descripcion": "La formación continua cobra mayor relevancia.",
+    "contenido": "Las organizaciones demandan nuevas competencias digitales, impulsando programas de actualización profesional y aprendizaje permanente.",
+    "autor": "GlobalNotice",
+    "fecha": "03/08/2025",
+    "imagen": "/images/noticia6.jpg",
+    "destacado": true
+  },
+  {
+    "id": 7,
+    "categoria": "Turismo",
+    "titulo": "El turismo sostenible gana protagonismo",
+    "descripcion": "Viajar con responsabilidad es tendencia.",
+    "contenido": "Cada vez más viajeros buscan experiencias respetuosas con el medio ambiente, impulsando modelos de turismo sostenible en todo el mundo.",
+    "autor": "GlobalNotice",
+    "fecha": "18/09/2025",
+    "imagen": "/images/noticia7.jpg",
+    "destacado": false
+  },
+  {
+    "id": 8,
+    "categoria": "Negocios",
+    "titulo": "Las pymes fortalecen la transformación digital",
+    "descripcion": "La digitalización se vuelve una necesidad.",
+    "contenido": "Las pequeñas y medianas empresas adoptan herramientas digitales para optimizar operaciones, mejorar ventas y ampliar su alcance comercial.",
+    "autor": "GlobalNotice",
+    "fecha": "20/10/2025",
+    "imagen": "/images/noticia8.jpg",
+    "destacado": false
   }
 ]
