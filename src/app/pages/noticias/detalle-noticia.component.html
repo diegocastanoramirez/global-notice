@@ -1,0 +1,173 @@
+<app-navbar></app-navbar>
+
+<div *ngIf="noticia as n">
+
+    <section class="contenedor-detalle">
+
+        <div class="principal">
+
+        <div class="breadcrumb">
+        
+        🏠 Noticias >
+        
+            <span>{{ n.categoria }}</span>
+            
+            >
+            
+            <strong>{{ n.titulo }}</strong>
+        
+        </div>
+
+            <span class="categoria">
+
+                {{ n.categoria }}
+
+            </span>
+
+            <h1>
+
+                {{ n.titulo }}
+
+            </h1>
+
+        <div class="encabezado-articulo">
+
+            <div class="texto-principal">
+
+                <p class="descripcion">
+
+                    {{ n.descripcion }}
+
+                </p>
+
+            </div>
+
+            <div class="acciones">
+
+                <button class="btn-favorito">
+
+                    ❤️ Agregar a favoritos
+
+                </button>
+
+                <button class="btn-compartir">
+
+                    ↗ Compartir
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+            
+            <div class="meta">
+
+                <span>
+                    📅 {{ n.fecha }}
+                </span>
+
+                <span>
+                    ✍ {{ n.autor }}
+                </span>
+
+            </div>
+
+            <img
+                class="imagen-principal"
+                [src]="n.imagen"
+                [alt]="n.titulo">
+
+            <div class="contenido-noticia">
+
+                {{ n.contenido }}
+
+            </div>
+
+        </div>
+
+        <aside class="sidebar">
+
+            <div class="relacionadas">
+
+                <h3>
+
+                    Noticias Relacionadas
+
+                </h3>
+
+                <div
+                    class="relacionada"
+                    *ngFor="let relacionada of noticiasRelacionadas"
+                    (click)="abrirNoticia(relacionada.id)">
+
+                    <img
+                        [src]="relacionada.imagen"
+                        [alt]="relacionada.titulo">
+
+                    <div class="relacionada-info">
+
+                        <span class="categoria-mini">
+
+                            {{ relacionada.categoria }}
+
+                        </span>
+
+                        <h4>
+
+                            {{ relacionada.titulo }}
+
+                        </h4>
+
+                        <p>
+
+                            {{ relacionada.fecha }}
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="newsletter">
+
+                <h3>
+
+                    ¡Mantente informado!
+
+                </h3>
+
+                <p>
+
+                    Recibe las últimas noticias en tu correo.
+
+                </p>
+
+                <input
+                    type="email"
+                    placeholder="Tu correo electrónico">
+
+                <button>
+
+
+                    Suscribirme
+
+                </button>
+
+            </div>
+
+        </aside>
+
+    </section>
+
+</div>
+
+<app-footer></app-footer>

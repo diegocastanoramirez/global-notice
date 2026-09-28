@@ -1,0 +1,408 @@
+.contenedor-detalle {
+
+    max-width: 1500px;
+
+    margin: 30px auto;
+
+    padding: 0 30px;
+
+    display: grid;
+
+    grid-template-columns: 2.3fr 1fr;
+
+    gap: 40px;
+}
+
+.principal {
+
+    width: 100%;
+
+    background: white;
+}
+
+.breadcrumb {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 10px 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    margin-bottom: 20px;
+}
+
+.categoria {
+
+    display: inline-block;
+
+    background: #012552;
+
+    color: white;
+
+    padding: 6px 14px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+}
+
+.principal h1 {
+
+    color: #012552;
+
+    font-size: 54px;
+
+    line-height: 1.15;
+
+    margin-bottom: 15px;
+
+    max-width: 900px;
+}
+
+.descripcion {
+
+    font-size: 22px;
+
+    color: #555;
+
+    margin-bottom: 25px;
+
+    line-height: 1.5;
+}
+
+.acciones {
+
+    display: flex;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.btn-favorito {
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.btn-compartir {
+
+    background: white;
+
+    border: 1px solid #cfd8dc;
+
+    padding: 14px 24px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.meta {
+
+    display: flex;
+
+    gap: 25px;
+
+    color: #666;
+
+    margin-bottom: 25px;
+
+    font-size: 14px;
+}
+
+.imagen-principal {
+
+    width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    margin-bottom: 30px;
+
+    display: block;
+}
+
+.contenido-noticia {
+
+    color: #444;
+
+    line-height: 2;
+
+    font-size: 17px;
+
+    text-align: justify;
+}
+
+.sidebar {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.relacionadas {
+
+    background: white;
+
+    border: 1px solid #eee;
+
+    border-radius: 10px;
+
+    padding: 20px;
+}
+
+.relacionadas h3 {
+
+    color: #012552;
+
+    margin-bottom: 20px;
+
+    font-size: 22px;
+}
+
+.relacionada {
+
+    display: flex;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    padding-bottom: 15px;
+
+    border-bottom: 1px solid #eee;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.relacionada:hover {
+
+    transform: translateX(5px);
+}
+
+.relacionada:last-child {
+
+    border-bottom: none;
+
+    margin-bottom: 0;
+
+    padding-bottom: 0;
+}
+
+.relacionada img {
+
+    width: 110px;
+
+    height: 80px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    flex-shrink: 0;
+}
+
+.relacionada-info {
+
+    flex: 1;
+}
+
+.categoria-mini {
+
+    display: inline-block;
+
+    background: #ff2d55;
+
+    color: white;
+
+    font-size: 10px;
+
+    padding: 4px 8px;
+
+    border-radius: 20px;
+
+    margin-bottom: 8px;
+
+    font-weight: 600;
+}
+
+.relacionada-info h4 {
+
+    color: #012552;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    margin: 0 0 8px 0;
+}
+
+.relacionada-info p {
+
+    color: #777;
+
+    font-size: 12px;
+
+    margin: 0;
+}
+
+.newsletter {
+
+    background: #012552;
+
+    border-radius: 10px;
+
+    padding: 25px;
+
+    color: white;
+}
+
+.newsletter h3 {
+
+    margin-bottom: 10px;
+}
+
+.newsletter p {
+
+    margin-bottom: 15px;
+
+    color: rgba(255,255,255,.85);
+
+    line-height: 1.5;
+}
+
+.newsletter input {
+
+    width: 100%;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    margin-bottom: 12px;
+}
+
+.newsletter button {
+
+    width: 100%;
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.newsletter button:hover {
+
+    background: #e61e4d;
+}
+
+@media screen and (max-width: 1200px) {
+
+    .contenedor-detalle {
+
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .principal h1 {
+
+        font-size: 36px;
+    }
+
+    .descripcion {
+
+        font-size: 18px;
+    }
+
+    .acciones {
+
+        flex-direction: column;
+    }
+
+    .meta {
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .imagen-principal {
+
+        height: 240px;
+    }
+}
+.encabezado-articulo {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+.texto-principal {
+
+    flex: 1;
+}
+
+.acciones {
+
+    display: flex;
+
+    gap: 15px;
+
+    flex-shrink: 0;
+}

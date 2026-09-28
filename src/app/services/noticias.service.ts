@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
+import { Observable, map } from 'rxjs';
+
 import { Noticia } from '../models/noticia';
 
 @Injectable({
@@ -8,12 +10,33 @@ import { Noticia } from '../models/noticia';
 })
 export class NoticiasService {
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient
+  ) {}
 
   obtenerNoticias(): Observable<Noticia[]> {
+
     return this.http.get<Noticia[]>(
-  '/data/noticias.json'
-);
+      '/data/noticias.json'
+    );
+
+  }
+
+  obtenerNoticiaPorId(
+    id: number
+  ): Observable<Noticia | undefined> {
+
+    return this.obtenerNoticias().pipe(
+
+      map(
+        noticias =>
+          noticias.find(
+            noticia => noticia.id === id
+          )
+      )
+
+    );
+
   }
 
 }

@@ -8,6 +8,10 @@ export interface Noticia {
 
   descripcion: string;
 
+  contenido: string;
+
+  autor: string;
+
   fecha: string;
 
   imagen: string;

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { Noticia } from '../../models/noticia';
 import { FavoritosService } from '../../services/favoritos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-noticia-card',
@@ -18,7 +19,9 @@ export class NoticiaCardComponent implements OnInit {
   esFavorito = false;
 
   constructor(
-    private favoritosService: FavoritosService
+    private favoritosService: FavoritosService,
+    private router: Router
+    
   ) {}
 
   ngOnInit(): void {
@@ -46,5 +49,16 @@ export class NoticiaCardComponent implements OnInit {
       this.esFavorito = true;
     }
   }
+
+
+  verDetalle(): void {
+
+    this.router.navigate([
+      '/noticias',
+      this.noticia.id
+    ]);
+
+  }
+
 
 }
