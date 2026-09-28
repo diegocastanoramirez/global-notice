@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Noticias } from './noticias';
+import { Noticias } from './noticias.component';
 
 describe('Noticias', () => {
   let component: Noticias;

@@ -6,7 +6,7 @@
     "descripcion": "La IA está revolucionando el mercado laboral.",
     "fecha": "15/04/2025",
     "imagen": "/images/noticia1.jpg",
-    "destacado": true
+    "destacado": false
   },
   {
     "id": 2,

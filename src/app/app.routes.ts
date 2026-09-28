@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Routes } from '@angular/router';
 import { FavoritosComponent } from './pages/favoritos/favoritos.component';
+import { NoticiasComponent } from './pages/noticias/noticias.component';
 
 import { HomeComponent } from './components/home/home.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
@@ -19,6 +20,10 @@ export const routes: Routes = [
   {
   path: 'favoritos',
   component: FavoritosComponent
+  },
+  {
+  path: 'noticias',
+  component: NoticiasComponent
   }
 
 ];

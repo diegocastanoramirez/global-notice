@@ -36,7 +36,9 @@ export class HomeComponent implements OnInit {
       .subscribe({
         next: (data) => {
 
-          this.noticias = data;
+          this.noticias = data.filter(
+            noticia => noticia.destacado
+          );
 
           this.cdr.detectChanges();
 

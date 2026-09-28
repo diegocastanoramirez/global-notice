@@ -1,0 +1,47 @@
+<app-navbar></app-navbar>
+
+<section class="banner-noticias">
+
+    <div class="overlay-noticias">
+
+        <div class="contenido-noticias">
+
+            <span class="etiqueta">
+                NOTICIAS
+            </span>
+
+            <h1>
+                Todas las Noticias
+            </h1>
+
+            <p>
+                Explora las últimas noticias en tecnología,
+                educación, turismo y negocios.
+            </p>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+<section class="contenedor-principal">
+
+    <h2>
+        Mostrando {{ noticias.length }} noticias
+    </h2>
+
+    <div class="contenedor-noticias">
+
+        <app-noticia-card
+            *ngFor="let noticia of noticias"
+            [noticia]="noticia">
+        </app-noticia-card>
+
+    </div>
+
+    
+</section>
+
+<app-footer></app-footer>
