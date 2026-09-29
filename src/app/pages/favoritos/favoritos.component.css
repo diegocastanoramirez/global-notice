@@ -1,105 +1,149 @@
+/* Banner principal de la sección de favoritos */
 .banner-favoritos {
 
+    /* Altura fija del banner */
     height: 250px;
 
+    /* Imagen de fondo del banner */
     background-image: url('/images/banner.png');
 
+    /* Ajusta la imagen para cubrir todo el espacio */
     background-size: cover;
 
+    /* Centra la imagen de fondo */
     background-position: center;
 }
 
+/* Capa superpuesta para mejorar la legibilidad del contenido */
 .overlay-favoritos {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 
+    /* Ocupa toda la altura del banner */
     height: 100%;
 
+    /* Fondo oscuro semitransparente */
     background: rgba(0,0,0,.55);
 
+    /* Activa Flexbox */
     display: flex;
 
+    /* Centra verticalmente el contenido */
     align-items: center;
 }
 
+/* Contenedor principal del contenido del banner */
 .contenido-favoritos {
 
+    /* Separación respecto al borde izquierdo */
     margin-left: 60px;
 
+    /* Color general del texto */
     color: white;
 }
 
+/* Título principal de la sección */
 .contenido-favoritos h1 {
 
+    /* Tamaño destacado del título */
     font-size: 60px;
 
+    /* Separación inferior */
     margin-bottom: 10px;
 }
 
+/* Texto descriptivo del banner */
 .contenido-favoritos p {
 
+    /* Tamaño de fuente */
     font-size: 18px;
 
+    /* Altura entre líneas */
     line-height: 1.5;
 }
 
+/* Contenedor general del contenido de favoritos */
 .contenedor-favoritos {
 
+    /* Espaciado interno */
     padding: 50px 40px;
 
+    /* Color de fondo */
     background: #f5f7fa;
 }
 
+/* Título principal del listado de favoritos */
 .contenedor-favoritos h2 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Tamaño de fuente */
     font-size: 42px;
 
+    /* Separación inferior */
     margin-bottom: 30px;
 }
 
+/* Cuadrícula de noticias favoritas */
 .grid-favoritos {
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Cuatro columnas de igual tamaño */
     grid-template-columns: repeat(4, 1fr);
 
+    /* Espacio entre elementos */
     gap: 25px;
 }
 
+/* Mensaje mostrado cuando no existen favoritos */
 .sin-favoritos {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Espaciado interno */
     padding: 30px;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Centrado del texto */
     text-align: center;
 
+    /* Tamaño de fuente */
     font-size: 18px;
 
+    /* Color del texto */
     color: #666;
 
+    /* Sombra para resaltar el contenedor */
     box-shadow: 0 4px 15px rgba(0,0,0,.1);
 }
 
+/* Adaptación para pantallas medianas */
 @media screen and (max-width: 1400px) {
 
+    /* Reduce la cuadrícula a dos columnas */
     .grid-favoritos {
 
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Adaptación para dispositivos móviles */
 @media screen and (max-width: 768px) {
 
+    /* Muestra una única columna */
     .grid-favoritos {
 
         grid-template-columns: 1fr;
     }
 
+    /* Reduce el tamaño del título principal */
     .contenido-favoritos h1 {
 
         font-size: 40px;

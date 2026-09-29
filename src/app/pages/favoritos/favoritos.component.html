@@ -1,13 +1,19 @@
+<!-- Componente de barra de navegación principal -->
 <app-navbar></app-navbar>
 
+<!-- Banner principal de la sección de favoritos -->
 <section class="banner-favoritos">
 
+    <!-- Capa superpuesta para mejorar la visualización del contenido -->
     <div class="overlay-favoritos">
 
+        <!-- Contenedor del contenido informativo -->
         <div class="contenido-favoritos">
 
+            <!-- Título principal de la página -->
             <h1>Mis Favoritos</h1>
 
+            <!-- Descripción de la sección -->
             <p>
                 Aquí encontrarás las noticias que has guardado.
             </p>
@@ -18,10 +24,13 @@
 
 </section>
 
+<!-- Sección que contiene las noticias favoritas -->
 <section class="contenedor-favoritos">
 
+    <!-- Título del listado -->
     <h2>Noticias guardadas</h2>
 
+    <!-- Mensaje mostrado cuando no existen noticias guardadas -->
     <div
         class="sin-favoritos"
         *ngIf="favoritos.length === 0">
@@ -30,10 +39,12 @@
 
     </div>
 
+    <!-- Contenedor de noticias favoritas -->
     <div
         class="grid-favoritos"
         *ngIf="favoritos.length > 0">
 
+        <!-- Renderizado dinámico de cada noticia favorita -->
         <app-noticia-card
             *ngFor="let noticia of favoritos"
             [noticia]="noticia">
@@ -43,4 +54,5 @@
 
 </section>
 
+<!-- Componente de pie de página -->
 <app-footer></app-footer>

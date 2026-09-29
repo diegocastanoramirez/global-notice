@@ -1,74 +1,86 @@
+<!-- Componente de barra de navegación principal -->
 <app-navbar></app-navbar>
 
+<!-- Contenedor principal del módulo de administración -->
 <section class="contenedor-admin">
 
+    <!-- Título principal de la sección -->
     <h1>
         Administración de Noticias
     </h1>
 
+    <!-- Formulario para registrar nuevas noticias -->
     <div class="formulario">
 
+        <!-- Campo para ingresar la categoría -->
         <input
             type="text"
             [(ngModel)]="nuevaNoticia.categoria"
             placeholder="Categoría">
 
+        <!-- Campo para ingresar el título -->
         <input
             type="text"
             [(ngModel)]="nuevaNoticia.titulo"
             placeholder="Título">
 
+        <!-- Campo para ingresar el autor -->
         <input
             type="text"
             [(ngModel)]="nuevaNoticia.autor"
             placeholder="Autor">
 
+        <!-- Campo para ingresar la fecha -->
         <input
             type="text"
             [(ngModel)]="nuevaNoticia.fecha"
             placeholder="Fecha">
 
+        <!-- Selector de imagen para la noticia -->
         <select
             [(ngModel)]="nuevaNoticia.imagen">
 
+            <!-- Opción por defecto -->
             <option value="">
                 Seleccione una imagen
             </option>
 
+            <!-- Opciones disponibles de imágenes -->
             <option value="/images/noticia1.jpg">
                 Imagen 1
             </option>
 
             <option value="/images/noticia2.jpg">
-                Imagen 2 
+                Imagen 2
             </option>
 
             <option value="/images/noticia3.jpg">
-                Imagen 3 
+                Imagen 3
             </option>
 
             <option value="/images/noticia4.jpg">
-                Imagen 4 
+                Imagen 4
             </option>
 
             <option value="/images/noticia5.jpg">
-                Imagen 5 
+                Imagen 5
             </option>
 
             <option value="/images/noticia6.jpg">
-                Imagen 6 
+                Imagen 6
             </option>
 
             <option value="/images/noticia7.jpg">
-                Imagen 7 
+                Imagen 7
             </option>
 
             <option value="/images/noticia8.jpg">
-                Imagen 8 
+                Imagen 8
             </option>
 
         </select>
 
+        <!-- Vista previa de la imagen seleccionada -->
         <div
             class="preview-imagen"
             *ngIf="nuevaNoticia.imagen">
@@ -79,6 +91,7 @@
 
         </div>
 
+        <!-- Opción para marcar la noticia como destacada -->
         <label class="check-destacado">
 
             <input
@@ -89,16 +102,19 @@
 
         </label>
 
+        <!-- Campo para la descripción corta de la noticia -->
         <textarea
             [(ngModel)]="nuevaNoticia.descripcion"
             placeholder="Descripción">
         </textarea>
 
+        <!-- Campo para el contenido completo de la noticia -->
         <textarea
             [(ngModel)]="nuevaNoticia.contenido"
             placeholder="Contenido">
         </textarea>
 
+        <!-- Botón para crear una nueva noticia -->
         <button
             (click)="crearNoticia()">
 
@@ -108,12 +124,15 @@
 
     </div>
 
+    <!-- Título de la tabla de noticias registradas -->
     <h2>
         Noticias registradas
     </h2>
 
+    <!-- Tabla que muestra todas las noticias registradas -->
     <table>
 
+        <!-- Encabezado de la tabla -->
         <thead>
 
             <tr>
@@ -132,28 +151,35 @@
 
         </thead>
 
+        <!-- Cuerpo de la tabla -->
         <tbody>
 
+            <!-- Recorrido dinámico de las noticias registradas -->
             <tr *ngFor="let noticia of noticias">
 
+                <!-- Identificador de la noticia -->
                 <td>
                     {{ noticia.id }}
                 </td>
 
+                <!-- Título de la noticia -->
                 <td>
                     {{ noticia.titulo }}
                 </td>
 
+                <!-- Categoría de la noticia -->
                 <td>
                     {{ noticia.categoria }}
                 </td>
 
+                <!-- Indicador visual de noticia destacada -->
                 <td>
 
                     {{ noticia.destacado ? '✅' : '❌' }}
 
                 </td>
 
+                <!-- Acción para eliminar una noticia -->
                 <td>
 
                     <button
@@ -174,4 +200,5 @@
 
 </section>
 
+<!-- Componente de pie de página -->
 <app-footer></app-footer>

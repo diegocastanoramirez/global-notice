@@ -1,275 +1,395 @@
+/* Banner principal de la página de contacto */
 .banner-contacto {
 
+    /* Altura fija del banner */
     height: 250px;
 
+    /* Imagen de fondo del banner */
     background-image: url('/images/banner.png');
 
+    /* Ajusta la imagen para cubrir todo el contenedor */
     background-size: cover;
 
+    /* Centra la imagen de fondo */
     background-position: center;
 }
 
+/* Capa oscura superpuesta al banner */
 .overlay-contacto {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 
+    /* Ocupa toda la altura del banner */
     height: 100%;
 
+    /* Fondo semitransparente para mejorar la legibilidad */
     background: rgba(0,0,0,.55);
 
+    /* Activa Flexbox */
     display: flex;
 
+    /* Centra verticalmente el contenido */
     align-items: center;
 }
 
+/* Contenedor de la información principal del banner */
 .contenido-contacto {
 
+    /* Margen izquierdo para separación visual */
     margin-left: 60px;
 
+    /* Color del texto */
     color: white;
 }
 
+/* Título principal de la sección */
 .contenido-contacto h1 {
 
+    /* Tamaño destacado del título */
     font-size: 60px;
 
+    /* Separación inferior */
     margin-bottom: 10px;
 }
 
+/* Texto descriptivo del banner */
 .contenido-contacto p {
 
+    /* Tamaño de fuente */
     font-size: 18px;
 
+    /* Ancho máximo del texto */
     max-width: 500px;
 
+    /* Espaciado entre líneas */
     line-height: 1.5;
 }
 
+/* Contenedor principal de la página de contacto */
 .contenedor-contacto {
 
+    /* Ancho máximo permitido */
     max-width: 1400px;
 
+    /* Centrado horizontal */
     margin: 40px auto;
 
+    /* Espaciado interno lateral */
     padding: 0 20px;
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Dos columnas para información y formulario */
     grid-template-columns: 1fr 2fr;
 
+    /* Espaciado entre columnas */
     gap: 30px;
 }
 
+/* Tarjeta de información de contacto */
 .informacion {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Espaciado interno */
     padding: 30px;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Sombra decorativa */
     box-shadow: 0 4px 15px rgba(0,0,0,.1);
 }
 
+/* Título de la sección de información */
 .informacion h2 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 20px;
 }
 
+/* Elemento individual de información de contacto */
 .item-contacto {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Espaciado entre icono y texto */
     gap: 15px;
 
+    /* Márgenes verticales */
     margin: 25px 0;
 }
 
+/* Icono decorativo de contacto */
 .icono {
 
+    /* Ancho fijo */
     width: 50px;
 
+    /* Alto fijo */
     height: 50px;
 
+    /* Forma circular */
     border-radius: 50%;
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del icono */
     color: white;
 
+    /* Activa Flexbox */
     display: flex;
 
+    /* Centrado horizontal */
     justify-content: center;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Tamaño del icono */
     font-size: 20px;
 }
 
+/* Contenedor de redes sociales */
 .redes {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espaciado entre iconos */
     gap: 10px;
 
+    /* Separación superior */
     margin-top: 20px;
 }
 
+/* Iconos individuales de redes sociales */
 .redes span {
 
+    /* Ancho fijo */
     width: 40px;
 
+    /* Alto fijo */
     height: 40px;
 
+    /* Forma circular */
     border-radius: 50%;
 
+    /* Fondo corporativo */
     background: #012552;
 
+    /* Color del texto */
     color: white;
 
+    /* Activa Flexbox */
     display: flex;
 
+    /* Centrado horizontal */
     justify-content: center;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Cursor interactivo */
     cursor: pointer;
 }
 
+/* Contenedor del formulario */
 .formulario {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Espaciado interno */
     padding: 30px;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Sombra decorativa */
     box-shadow: 0 4px 15px rgba(0,0,0,.1);
 }
 
+/* Título del formulario */
 .formulario h2 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 }
 
+/* Formulario principal */
 form {
 
+    /* Distribución vertical */
     display: flex;
 
+    /* Organización en columna */
     flex-direction: column;
 
+    /* Espaciado entre campos */
     gap: 20px;
 }
 
+/* Contenedor de cada campo */
 .campo {
 
+    /* Distribución vertical */
     display: flex;
 
+    /* Organización en columna */
     flex-direction: column;
 }
 
+/* Campos de texto y área de mensajes */
 .campo input,
 .campo textarea {
 
+    /* Espaciado interno */
     padding: 14px;
 
+    /* Borde del campo */
     border: 1px solid #d9d9d9;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
+/* Mensajes de validación o error */
 .campo small {
 
+    /* Color de advertencia */
     color: red;
 
+    /* Separación superior */
     margin-top: 5px;
 }
 
+/* Botón principal del formulario */
 button {
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Elimina borde */
     border: none;
 
+    /* Espaciado interno */
     padding: 16px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Texto en negrita */
     font-weight: bold;
 
+    /* Tamaño de fuente */
     font-size: 15px;
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 button:hover {
 
+    /* Cambio de color de fondo */
     background: #e61e4d;
 }
 
+/* Mensaje de confirmación de envío */
 .confirmacion {
 
+    /* Separación superior */
     margin-top: 20px;
 
+    /* Color de éxito */
     color: green;
 
+    /* Texto en negrita */
     font-weight: bold;
 }
 
+/* Adaptación para pantallas pequeñas y tablets */
 @media screen and (max-width: 900px) {
 
+    /* Muestra una única columna */
     .contenedor-contacto {
 
         grid-template-columns: 1fr;
     }
 
+    /* Reduce el tamaño del título principal */
     .contenido-contacto h1 {
 
         font-size: 40px;
     }
 }
 
+/* Texto descriptivo debajo del título del formulario */
 .subtitulo-formulario {
 
+    /* Color secundario */
     color: #6b7280;
 
+    /* Separación inferior */
     margin-bottom: 20px;
 }
 
+/* Agrupa campos en una fila */
 .fila {
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Dos columnas iguales */
     grid-template-columns: 1fr 1fr;
 
+    /* Espacio entre columnas */
     gap: 15px;
 }
 
+/* Adaptación móvil para las filas del formulario */
 @media screen and (max-width: 768px) {
 
+    /* Muestra una sola columna */
     .fila {
 
         grid-template-columns: 1fr;
     }
 }
 
+/* Texto informativo de seguridad o privacidad */
 .texto-seguridad {
 
+    /* Centrado del texto */
     text-align: center;
 
+    /* Color secundario */
     color: #6b7280;
 
+    /* Tamaño reducido */
     font-size: 12px;
 
+    /* Separación superior */
     margin-top: 12px;
 }

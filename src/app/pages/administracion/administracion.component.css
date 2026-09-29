@@ -1,172 +1,248 @@
+/* Contenedor principal del módulo de administración */
 .contenedor-admin {
 
+    /* Ancho máximo del contenido */
     max-width: 1400px;
 
+    /* Centrado horizontal */
     margin: 40px auto;
 
+    /* Espaciado interno */
     padding: 20px;
 }
 
+/* Título principal de la sección */
 .contenedor-admin h1 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 }
 
+/* Formulario para la gestión de noticias */
 .formulario {
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Espaciado entre elementos */
     gap: 15px;
 
+    /* Separación inferior */
     margin-bottom: 40px;
 
+    /* Fondo blanco */
     background: white;
 
+    /* Espaciado interno */
     padding: 25px;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Sombra decorativa */
     box-shadow: 0 4px 15px rgba(0,0,0,.08);
 }
 
+/* Campos de entrada, texto y selección */
 .formulario input,
 .formulario textarea,
 .formulario select {
 
+    /* Ocupan todo el ancho disponible */
     width: 100%;
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Borde del campo */
     border: 1px solid #ddd;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
+/* Configuración específica de listas desplegables */
 .formulario select {
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Fondo blanco */
     background: white;
 }
 
+/* Configuración específica del área de texto */
 .formulario textarea {
 
+    /* Altura mínima visible */
     min-height: 120px;
 }
 
+/* Contenedor de previsualización de imagen */
 .preview-imagen {
 
+    /* Separación superior */
     margin-top: 5px;
 }
 
+/* Imagen de previsualización */
 .preview-imagen img {
 
+    /* Ancho fijo */
     width: 300px;
 
+    /* Altura fija */
     height: 180px;
 
+    /* Ajuste de imagen */
     object-fit: cover;
 
+    /* Bordes redondeados */
     border-radius: 10px;
 
+    /* Borde decorativo */
     border: 1px solid #ddd;
 }
 
+/* Contenedor del checkbox de noticia destacada */
 .check-destacado {
 
+    /* Distribución horizontal */
     display: inline-flex;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Espacio entre elementos */
     gap: 10px;
 
+    /* Ajuste al contenido */
     width: fit-content;
 
+    /* Espaciado interno */
     padding: 8px 12px;
 
+    /* Fondo suave */
     background: #f8fafc;
 
+    /* Borde decorativo */
     border: 1px solid #e2e8f0;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Color del texto */
     color: #012552;
 
+    /* Texto seminegrita */
     font-weight: 600;
 }
 
+/* Botón principal del formulario */
 .formulario button {
 
+    /* Ancho fijo */
     width: 220px;
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Eliminación de borde */
     border: none;
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Texto en negrita */
     font-weight: bold;
 }
 
+/* Efecto hover del botón principal */
 .formulario button:hover {
 
+    /* Cambio de color */
     background: #e61e4d;
 }
 
+/* Tabla de administración de noticias */
 table {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 
+    /* Unifica los bordes */
     border-collapse: collapse;
 
+    /* Fondo blanco */
     background: white;
 }
 
+/* Celdas del encabezado y contenido */
 th,
 td {
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Bordes de la tabla */
     border: 1px solid #ddd;
 
+    /* Alineación del texto */
     text-align: left;
 }
 
+/* Encabezados de la tabla */
 th {
 
+    /* Fondo corporativo */
     background: #012552;
 
+    /* Texto blanco */
     color: white;
 }
 
+/* Botón para eliminar registros */
 .btn-eliminar {
 
+    /* Sin borde */
     border: none;
 
+    /* Fondo transparente */
     background: transparent;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Tamaño del icono */
     font-size: 18px;
 }
 
+/* Efecto hover del botón eliminar */
 .btn-eliminar:hover {
 
+    /* Incrementa ligeramente el tamaño */
     transform: scale(1.15);
 }
 
+/* Adaptación para dispositivos móviles */
 @media screen and (max-width: 768px) {
 
+    /* Ajusta la imagen al ancho disponible */
     .preview-imagen img {
 
         width: 100%;
@@ -174,6 +250,7 @@ th {
         height: auto;
     }
 
+    /* Permite desplazamiento horizontal en tablas */
     table {
 
         display: block;
