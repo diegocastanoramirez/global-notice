@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Observable, map } from 'rxjs';
+import {
+  Observable,
+  map
+} from 'rxjs';
 
 import { Noticia } from '../models/noticia';
 
@@ -16,9 +19,31 @@ export class NoticiasService {
 
   obtenerNoticias(): Observable<Noticia[]> {
 
-    return this.http.get<Noticia[]>(
-      '/data/noticias.json'
-    );
+    return this.http
+      .get<Noticia[]>(
+        '/data/noticias.json'
+      )
+      .pipe(
+
+        map(
+          noticiasJson => {
+
+            const noticiasLocalStorage =
+              JSON.parse(
+                localStorage.getItem(
+                  'noticias-admin'
+                ) || '[]'
+              );
+
+            return [
+              ...noticiasJson,
+              ...noticiasLocalStorage
+            ];
+
+          }
+        )
+
+      );
 
   }
 
@@ -31,7 +56,8 @@ export class NoticiasService {
       map(
         noticias =>
           noticias.find(
-            noticia => noticia.id === id
+            noticia =>
+              noticia.id === id
           )
       )
 

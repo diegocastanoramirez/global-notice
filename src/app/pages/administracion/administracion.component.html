@@ -1,0 +1,177 @@
+<app-navbar></app-navbar>
+
+<section class="contenedor-admin">
+
+    <h1>
+        Administración de Noticias
+    </h1>
+
+    <div class="formulario">
+
+        <input
+            type="text"
+            [(ngModel)]="nuevaNoticia.categoria"
+            placeholder="Categoría">
+
+        <input
+            type="text"
+            [(ngModel)]="nuevaNoticia.titulo"
+            placeholder="Título">
+
+        <input
+            type="text"
+            [(ngModel)]="nuevaNoticia.autor"
+            placeholder="Autor">
+
+        <input
+            type="text"
+            [(ngModel)]="nuevaNoticia.fecha"
+            placeholder="Fecha">
+
+        <select
+            [(ngModel)]="nuevaNoticia.imagen">
+
+            <option value="">
+                Seleccione una imagen
+            </option>
+
+            <option value="/images/noticia1.jpg">
+                Imagen 1 - Tecnología
+            </option>
+
+            <option value="/images/noticia2.jpg">
+                Imagen 2 - Educación
+            </option>
+
+            <option value="/images/noticia3.jpg">
+                Imagen 3 - Turismo
+            </option>
+
+            <option value="/images/noticia4.jpg">
+                Imagen 4 - Tecnología
+            </option>
+
+            <option value="/images/noticia5.jpg">
+                Imagen 5 - Negocios
+            </option>
+
+            <option value="/images/noticia6.jpg">
+                Imagen 6 - Educación
+            </option>
+
+            <option value="/images/noticia7.jpg">
+                Imagen 7 - Turismo
+            </option>
+
+            <option value="/images/noticia8.jpg">
+                Imagen 8 - Negocios
+            </option>
+
+        </select>
+
+        <div
+            class="preview-imagen"
+            *ngIf="nuevaNoticia.imagen">
+
+            <img
+                [src]="nuevaNoticia.imagen"
+                alt="Vista previa">
+
+        </div>
+
+        <label class="check-destacado">
+
+            <input
+                type="checkbox"
+                [(ngModel)]="nuevaNoticia.destacado">
+
+            Mostrar como noticia destacada
+
+        </label>
+
+        <textarea
+            [(ngModel)]="nuevaNoticia.descripcion"
+            placeholder="Descripción">
+        </textarea>
+
+        <textarea
+            [(ngModel)]="nuevaNoticia.contenido"
+            placeholder="Contenido">
+        </textarea>
+
+        <button
+            (click)="crearNoticia()">
+
+            Crear noticia
+
+        </button>
+
+    </div>
+
+    <h2>
+        Noticias registradas
+    </h2>
+
+    <table>
+
+        <thead>
+
+            <tr>
+
+                <th>ID</th>
+
+                <th>Título</th>
+
+                <th>Categoría</th>
+
+                <th>Destacada</th>
+
+                <th>Eliminar</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr *ngFor="let noticia of noticias">
+
+                <td>
+                    {{ noticia.id }}
+                </td>
+
+                <td>
+                    {{ noticia.titulo }}
+                </td>
+
+                <td>
+                    {{ noticia.categoria }}
+                </td>
+
+                <td>
+
+                    {{ noticia.destacado ? '✅' : '❌' }}
+
+                </td>
+
+                <td>
+
+                    <button
+                        class="btn-eliminar"
+                        (click)="eliminarNoticia(noticia.id)">
+
+                        🗑
+
+                    </button>
+
+                </td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<app-footer></app-footer>

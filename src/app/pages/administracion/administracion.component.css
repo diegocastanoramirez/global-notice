@@ -1,0 +1,183 @@
+.contenedor-admin {
+
+    max-width: 1400px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+}
+
+.contenedor-admin h1 {
+
+    color: #012552;
+
+    margin-bottom: 25px;
+}
+
+.formulario {
+
+    display: grid;
+
+    gap: 15px;
+
+    margin-bottom: 40px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.08);
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+}
+
+.formulario select {
+
+    cursor: pointer;
+
+    background: white;
+}
+
+.formulario textarea {
+
+    min-height: 120px;
+}
+
+.preview-imagen {
+
+    margin-top: 5px;
+}
+
+.preview-imagen img {
+
+    width: 300px;
+
+    height: 180px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+
+    border: 1px solid #ddd;
+}
+
+.check-destacado {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+
+    padding: 8px 12px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 8px;
+
+    color: #012552;
+
+    font-weight: 600;
+}
+
+.formulario button {
+
+    width: 220px;
+
+    background: #ff2d55;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.formulario button:hover {
+
+    background: #e61e4d;
+}
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+th,
+td {
+
+    padding: 12px;
+
+    border: 1px solid #ddd;
+
+    text-align: left;
+}
+
+th {
+
+    background: #012552;
+
+    color: white;
+}
+
+.btn-eliminar {
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    font-size: 18px;
+}
+
+.btn-eliminar:hover {
+
+    transform: scale(1.15);
+}
+
+@media screen and (max-width: 768px) {
+
+    .preview-imagen img {
+
+        width: 100%;
+
+        height: auto;
+    }
+
+    table {
+
+        display: block;
+
+        overflow-x: auto;
+    }
+}
