@@ -1,11 +1,16 @@
+<!-- Componente de barra de navegación principal -->
 <app-navbar></app-navbar>
 
+<!-- Contenedor principal que se muestra únicamente si existe una noticia seleccionada -->
 <div *ngIf="noticia as n">
 
+    <!-- Sección principal del detalle de la noticia -->
     <section class="contenedor-detalle">
 
+        <!-- Contenido principal del artículo -->
         <div class="principal">
 
+        <!-- Ruta de navegación para ubicar al usuario dentro de la aplicación -->
         <div class="breadcrumb">
         
         🏠 Noticias >
@@ -18,22 +23,27 @@
         
         </div>
 
+            <!-- Categoría de la noticia -->
             <span class="categoria">
 
                 {{ n.categoria }}
 
             </span>
 
+            <!-- Título principal de la noticia -->
             <h1>
 
                 {{ n.titulo }}
 
             </h1>
 
+        <!-- Encabezado que contiene descripción y acciones disponibles -->
         <div class="encabezado-articulo">
 
+            <!-- Contenedor de información descriptiva -->
             <div class="texto-principal">
 
+                <!-- Resumen o descripción de la noticia -->
                 <p class="descripcion">
 
                     {{ n.descripcion }}
@@ -42,14 +52,17 @@
 
             </div>
 
+            <!-- Área de acciones del usuario -->
             <div class="acciones">
 
+                <!-- Botón para agregar la noticia a favoritos -->
                 <button class="btn-favorito">
 
                     ❤️ Agregar a favoritos
 
                 </button>
 
+                <!-- Botón para compartir la noticia -->
                 <button class="btn-compartir">
 
                     ↗ Compartir
@@ -60,30 +73,28 @@
 
         </div>
 
-
-
-
-
-
-
-            
+            <!-- Información complementaria de la noticia -->
             <div class="meta">
 
+                <!-- Fecha de publicación -->
                 <span>
                     📅 {{ n.fecha }}
                 </span>
 
+                <!-- Autor de la noticia -->
                 <span>
                     ✍ {{ n.autor }}
                 </span>
 
             </div>
 
+            <!-- Imagen principal asociada a la noticia -->
             <img
                 class="imagen-principal"
                 [src]="n.imagen"
                 [alt]="n.titulo">
 
+            <!-- Contenido completo del artículo -->
             <div class="contenido-noticia">
 
                 {{ n.contenido }}
@@ -92,8 +103,10 @@
 
         </div>
 
+        <!-- Barra lateral de información complementaria -->
         <aside class="sidebar">
 
+            <!-- Sección de noticias relacionadas -->
             <div class="relacionadas">
 
                 <h3>
@@ -102,29 +115,35 @@
 
                 </h3>
 
+                <!-- Listado dinámico de noticias relacionadas -->
                 <div
                     class="relacionada"
                     *ngFor="let relacionada of noticiasRelacionadas"
                     (click)="abrirNoticia(relacionada.id)">
 
+                    <!-- Imagen de la noticia relacionada -->
                     <img
                         [src]="relacionada.imagen"
                         [alt]="relacionada.titulo">
 
+                    <!-- Información resumida de la noticia relacionada -->
                     <div class="relacionada-info">
 
+                        <!-- Categoría de la noticia relacionada -->
                         <span class="categoria-mini">
 
                             {{ relacionada.categoria }}
 
                         </span>
 
+                        <!-- Título de la noticia relacionada -->
                         <h4>
 
                             {{ relacionada.titulo }}
 
                         </h4>
 
+                        <!-- Fecha de publicación -->
                         <p>
 
                             {{ relacionada.fecha }}
@@ -137,6 +156,7 @@
 
             </div>
 
+            <!-- Sección de suscripción al boletín informativo -->
             <div class="newsletter">
 
                 <h3>
@@ -145,18 +165,20 @@
 
                 </h3>
 
+                <!-- Mensaje informativo para el usuario -->
                 <p>
 
                     Recibe las últimas noticias en tu correo.
 
                 </p>
 
+                <!-- Campo para ingresar correo electrónico -->
                 <input
                     type="email"
                     placeholder="Tu correo electrónico">
 
+                <!-- Botón de suscripción -->
                 <button>
-
 
                     Suscribirme
 
@@ -170,4 +192,5 @@
 
 </div>
 
+<!-- Componente de pie de página -->
 <app-footer></app-footer>

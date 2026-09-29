@@ -1,220 +1,321 @@
+/* Contenedor principal del detalle de la noticia */
 .contenedor-detalle {
 
+    /* Ancho máximo del contenido */
     max-width: 1500px;
 
+    /* Centrado horizontal con margen superior e inferior */
     margin: 30px auto;
 
+    /* Espaciado interno lateral */
     padding: 0 30px;
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* División entre contenido principal y barra lateral */
     grid-template-columns: 2.3fr 1fr;
 
+    /* Espaciado entre columnas */
     gap: 40px;
 }
 
+/* Contenedor principal del artículo */
 .principal {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 
+    /* Fondo blanco */
     background: white;
 }
 
+/* Migas de pan para navegación */
 .breadcrumb {
 
+    /* Distribución horizontal */
     display: inline-flex;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Espacio entre elementos */
     gap: 6px;
 
+    /* Espaciado interno */
     padding: 10px 14px;
 
+    /* Fondo suave */
     background: #f8fafc;
 
+    /* Borde decorativo */
     border: 1px solid #e2e8f0;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Color del texto */
     color: #64748b;
 
+    /* Tamaño de fuente */
     font-size: 13px;
 
+    /* Separación inferior */
     margin-bottom: 20px;
 }
 
+/* Etiqueta de categoría de la noticia */
 .categoria {
 
+    /* Permite aplicar dimensiones */
     display: inline-block;
 
+    /* Color de fondo */
     background: #012552;
 
+    /* Color del texto */
     color: white;
 
+    /* Espaciado interno */
     padding: 6px 14px;
 
+    /* Bordes redondeados */
     border-radius: 20px;
 
+    /* Tamaño de fuente */
     font-size: 12px;
 
+    /* Peso de fuente */
     font-weight: 600;
 
+    /* Separación inferior */
     margin-bottom: 15px;
 }
 
+/* Título principal del artículo */
 .principal h1 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Tamaño destacado */
     font-size: 54px;
 
+    /* Altura de línea */
     line-height: 1.15;
 
+    /* Separación inferior */
     margin-bottom: 15px;
 
+    /* Ancho máximo */
     max-width: 900px;
 }
 
+/* Descripción corta de la noticia */
 .descripcion {
 
+    /* Tamaño de texto */
     font-size: 22px;
 
+    /* Color del texto */
     color: #555;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 
+    /* Altura entre líneas */
     line-height: 1.5;
 }
 
+/* Contenedor de acciones disponibles */
 .acciones {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espacio entre botones */
     gap: 15px;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 }
 
+/* Botón para agregar a favoritos */
 .btn-favorito {
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Eliminación del borde */
     border: none;
 
+    /* Espaciado interno */
     padding: 14px 24px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Texto en negrita */
     font-weight: bold;
 
+    /* Cursor interactivo */
     cursor: pointer;
 }
 
+/* Botón para compartir contenido */
 .btn-compartir {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Borde decorativo */
     border: 1px solid #cfd8dc;
 
+    /* Espaciado interno */
     padding: 14px 24px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Cursor interactivo */
     cursor: pointer;
 }
 
+/* Información adicional de la noticia */
 .meta {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espaciado entre elementos */
     gap: 25px;
 
+    /* Color del texto */
     color: #666;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
+/* Imagen principal de la noticia */
 .imagen-principal {
 
+    /* Ocupa todo el ancho */
     width: 100%;
 
+    /* Altura fija */
     height: 320px;
 
+    /* Ajuste de la imagen */
     object-fit: cover;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Separación inferior */
     margin-bottom: 30px;
 
+    /* Comportamiento de bloque */
     display: block;
 }
 
+/* Contenido completo del artículo */
 .contenido-noticia {
 
+    /* Color del texto */
     color: #444;
 
+    /* Altura entre líneas */
     line-height: 2;
 
+    /* Tamaño de fuente */
     font-size: 17px;
 
+    /* Justificación del texto */
     text-align: justify;
 }
 
+/* Barra lateral del detalle */
 .sidebar {
 
+    /* Distribución flexible */
     display: flex;
 
+    /* Organización en columna */
     flex-direction: column;
 
+    /* Separación entre secciones */
     gap: 25px;
 }
 
+/* Sección de noticias relacionadas */
 .relacionadas {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Borde decorativo */
     border: 1px solid #eee;
 
+    /* Bordes redondeados */
     border-radius: 10px;
 
+    /* Espaciado interno */
     padding: 20px;
 }
 
+/* Título de noticias relacionadas */
 .relacionadas h3 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 20px;
 
+    /* Tamaño de fuente */
     font-size: 22px;
 }
 
+/* Tarjeta individual de noticia relacionada */
 .relacionada {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espaciado interno */
     gap: 12px;
 
+    /* Separación inferior */
     margin-bottom: 15px;
 
+    /* Espaciado interno inferior */
     padding-bottom: 15px;
 
+    /* Línea divisoria */
     border-bottom: 1px solid #eee;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Transición suave */
     transition: .3s;
 }
 
+/* Efecto al pasar el cursor */
 .relacionada:hover {
 
+    /* Desplazamiento lateral */
     transform: translateX(5px);
 }
 
+/* Elimina borde y espaciado del último elemento */
 .relacionada:last-child {
 
     border-bottom: none;
@@ -224,150 +325,211 @@
     padding-bottom: 0;
 }
 
+/* Imagen de noticia relacionada */
 .relacionada img {
 
+    /* Ancho fijo */
     width: 110px;
 
+    /* Altura fija */
     height: 80px;
 
+    /* Ajuste de imagen */
     object-fit: cover;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Evita reducción del tamaño */
     flex-shrink: 0;
 }
 
+/* Contenedor de información relacionada */
 .relacionada-info {
 
+    /* Ocupa el espacio disponible */
     flex: 1;
 }
 
+/* Etiqueta de categoría de noticia relacionada */
 .categoria-mini {
 
+    /* Permite dimensiones personalizadas */
     display: inline-block;
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Tamaño de fuente */
     font-size: 10px;
 
+    /* Espaciado interno */
     padding: 4px 8px;
 
+    /* Bordes redondeados */
     border-radius: 20px;
 
+    /* Separación inferior */
     margin-bottom: 8px;
 
+    /* Texto seminegrita */
     font-weight: 600;
 }
 
+/* Título de noticia relacionada */
 .relacionada-info h4 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 
+    /* Altura de línea */
     line-height: 1.4;
 
+    /* Márgenes personalizados */
     margin: 0 0 8px 0;
 }
 
+/* Fecha de noticia relacionada */
 .relacionada-info p {
 
+    /* Color secundario */
     color: #777;
 
+    /* Tamaño de texto */
     font-size: 12px;
 
+    /* Elimina márgenes */
     margin: 0;
 }
 
+/* Sección de suscripción al boletín */
 .newsletter {
 
+    /* Fondo principal */
     background: #012552;
 
+    /* Bordes redondeados */
     border-radius: 10px;
 
+    /* Espaciado interno */
     padding: 25px;
 
+    /* Color del texto */
     color: white;
 }
 
+/* Título del boletín */
 .newsletter h3 {
 
+    /* Separación inferior */
     margin-bottom: 10px;
 }
 
+/* Texto descriptivo del boletín */
 .newsletter p {
 
+    /* Separación inferior */
     margin-bottom: 15px;
 
+    /* Texto semitransparente */
     color: rgba(255,255,255,.85);
 
+    /* Altura de línea */
     line-height: 1.5;
 }
 
+/* Campo de correo electrónico */
 .newsletter input {
 
+    /* Ocupa todo el ancho */
     width: 100%;
 
+    /* Elimina borde */
     border: none;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Separación inferior */
     margin-bottom: 12px;
 }
 
+/* Botón de suscripción */
 .newsletter button {
 
+    /* Ocupa todo el ancho */
     width: 100%;
 
+    /* Fondo principal */
     background: #ff2d55;
 
+    /* Texto blanco */
     color: white;
 
+    /* Elimina borde */
     border: none;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Texto en negrita */
     font-weight: bold;
 }
 
+/* Efecto hover del botón de suscripción */
 .newsletter button:hover {
 
+    /* Cambio de color */
     background: #e61e4d;
 }
 
+/* Adaptación para pantallas medianas */
 @media screen and (max-width: 1200px) {
 
+    /* Muestra contenido en una sola columna */
     .contenedor-detalle {
 
         grid-template-columns: 1fr;
     }
 }
 
+/* Adaptación para dispositivos móviles */
 @media screen and (max-width: 768px) {
 
+    /* Reduce el tamaño del título */
     .principal h1 {
 
         font-size: 36px;
     }
 
+    /* Reduce el tamaño de la descripción */
     .descripcion {
 
         font-size: 18px;
     }
 
+    /* Organiza botones en columna */
     .acciones {
 
         flex-direction: column;
     }
 
+    /* Organiza metadatos en columna */
     .meta {
 
         flex-direction: column;
@@ -375,34 +537,48 @@
         gap: 10px;
     }
 
+    /* Reduce altura de la imagen */
     .imagen-principal {
 
         height: 240px;
     }
 }
+
+/* Contenedor superior con descripción y acciones */
 .encabezado-articulo {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Separa elementos a los extremos */
     justify-content: space-between;
 
+    /* Alineación superior */
     align-items: flex-start;
 
+    /* Espaciado entre bloques */
     gap: 25px;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 }
 
+/* Contenedor del texto principal */
 .texto-principal {
 
+    /* Ocupa el espacio disponible */
     flex: 1;
 }
 
+/* Grupo de botones de acción */
 .acciones {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espaciado entre botones */
     gap: 15px;
 
+    /* Evita que el bloque se reduzca */
     flex-shrink: 0;
 }

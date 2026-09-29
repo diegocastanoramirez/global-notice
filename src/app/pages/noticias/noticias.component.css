@@ -1,216 +1,308 @@
+/* Banner principal de la página de noticias */
 .banner-noticias {
 
+    /* Altura del banner */
     height: 250px;
 
+    /* Imagen de fondo del banner */
     background-image: url('/images/banner.png');
 
+    /* Ajuste de la imagen para cubrir todo el espacio */
     background-size: cover;
 
+    /* Centrado de la imagen de fondo */
     background-position: center;
 }
 
+/* Capa superpuesta sobre el banner */
 .overlay-noticias {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
+
+    /* Ocupa toda la altura del banner */
     height: 100%;
 
+    /* Fondo oscuro semitransparente */
     background: rgba(0,0,0,.55);
 
+    /* Activa Flexbox */
     display: flex;
 
+    /* Centra verticalmente el contenido */
     align-items: center;
 }
 
+/* Contenedor del contenido del banner */
 .contenido-noticias {
 
+    /* Separación izquierda */
     margin-left: 60px;
 
+    /* Color general del texto */
     color: white;
 }
 
+/* Etiqueta identificadora de la sección */
 .etiqueta {
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Espaciado interno */
     padding: 8px 15px;
 
+    /* Bordes redondeados */
     border-radius: 6px;
 
+    /* Tamaño de texto */
     font-size: 12px;
 
+    /* Texto en negrita */
     font-weight: bold;
 }
 
+/* Título principal del banner */
 .contenido-noticias h1 {
 
+    /* Separación superior */
     margin-top: 15px;
 
+    /* Tamaño del título */
     font-size: 56px;
 }
 
+/* Texto descriptivo del banner */
 .contenido-noticias p {
 
+    /* Tamaño de fuente */
     font-size: 18px;
 }
 
+/* Contenedor principal de filtros y contenido */
 .contenedor-principal {
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Dos columnas: sidebar y contenido */
     grid-template-columns: 320px 1fr;
 
+    /* Espaciado entre columnas */
     gap: 30px;
 
+    /* Color de fondo */
     background: #f5f7fa;
 
+    /* Espaciado interno */
     padding: 40px;
 }
 
+/* Barra lateral de filtros */
 .sidebar {
 
+    /* Fondo blanco */
     background: white;
 
+    /* Espaciado interno */
     padding: 20px;
 
+    /* Bordes redondeados */
     border-radius: 12px;
 
+    /* Ajuste automático a la altura del contenido */
     height: fit-content;
 
+    /* Sombra para destacar el contenedor */
     box-shadow: 0 4px 15px rgba(0,0,0,.1);
 }
 
+/* Títulos dentro de la barra lateral */
 .sidebar h3 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 15px;
 
+    /* Tamaño de texto */
     font-size: 18px;
 }
 
+/* Línea divisoria de la barra lateral */
 .sidebar hr {
 
+    /* Márgenes verticales */
     margin: 20px 0;
 
+    /* Eliminación del borde por defecto */
     border: none;
 
+    /* Línea superior personalizada */
     border-top: 1px solid #ddd;
 }
 
+/* Botones de filtrado */
 .sidebar button {
 
+    /* Ocupa todo el ancho */
     width: 100%;
 
+    /* Elimina bordes */
     border: none;
 
+    /* Fondo por defecto */
     background: #f2f4f8;
 
+    /* Espaciado interno */
     padding: 12px 15px;
 
+    /* Separación entre botones */
     margin-bottom: 10px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Cursor interactivo */
     cursor: pointer;
 
+    /* Transición suave */
     transition: .3s;
 
+    /* Distribución flexible */
     display: flex;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Distribución horizontal del contenido */
     justify-content: space-between;
 
+    /* Alineación del texto */
     text-align: left;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
+/* Efecto al pasar el cursor sobre los botones */
 .sidebar button:hover {
 
+    /* Cambio de color de fondo */
     background: #ff2d55;
 
+    /* Cambio de color del texto */
     color: white;
 }
 
+/* Estilo del botón seleccionado */
 .sidebar button.activa {
 
+    /* Fondo resaltado */
     background: #ff2d55;
 
+    /* Texto blanco */
     color: white;
 
+    /* Texto en negrita */
     font-weight: bold;
 }
 
+/* Selector de fechas */
 .sidebar select {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 
+    /* Espaciado interno */
     padding: 12px;
 
+    /* Borde del control */
     border: 1px solid #ddd;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Fondo blanco */
     background: white;
 
+    /* Tamaño de fuente */
     font-size: 14px;
 }
 
+/* Área principal donde se muestran las noticias */
 .contenido {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 }
 
+/* Título del contenido principal */
 .contenido h2 {
 
+    /* Color corporativo */
     color: #012552;
 
+    /* Separación inferior */
     margin-bottom: 25px;
 }
 
+/* Contenedor de las tarjetas de noticias */
 .contenedor-noticias {
 
+    /* Distribución mediante Grid */
     display: grid;
 
+    /* Tres columnas de igual tamaño */
     grid-template-columns: repeat(3, 1fr);
 
+    /* Espaciado entre tarjetas */
     gap: 25px;
 }
 
+/* Adaptación para pantallas medianas */
 @media screen and (max-width: 1400px) {
 
+    /* Reduce el listado a dos columnas */
     .contenedor-noticias {
 
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Adaptación para tablets y pantallas pequeñas */
 @media screen and (max-width: 900px) {
 
+    /* Cambia la distribución a una sola columna */
     .contenedor-principal {
 
         grid-template-columns: 1fr;
     }
 
+    /* Permite que la barra lateral ocupe todo el ancho */
     .sidebar {
 
         width: 100%;
     }
 
+    /* Muestra una sola columna de noticias */
     .contenedor-noticias {
 
         grid-template-columns: 1fr;
     }
 }
 
+/* Adaptación para dispositivos móviles */
 @media screen and (max-width: 768px) {
 
+    /* Reduce el tamaño del título principal */
     .contenido-noticias h1 {
 
         font-size: 40px;
     }
 
+    /* Reduce el margen lateral del contenido */
     .contenido-noticias {
 
         margin-left: 30px;

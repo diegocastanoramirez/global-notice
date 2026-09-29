@@ -1,19 +1,26 @@
+<!-- Componente de barra de navegación principal -->
 <app-navbar></app-navbar>
 
+<!-- Banner principal de la sección de noticias -->
 <section class="banner-noticias">
 
+    <!-- Capa superpuesta sobre el banner -->
     <div class="overlay-noticias">
 
+        <!-- Contenido informativo del banner -->
         <div class="contenido-noticias">
 
+            <!-- Etiqueta identificadora de la sección -->
             <span class="etiqueta">
                 NOTICIAS
             </span>
 
+            <!-- Título principal de la página -->
             <h1>
                 Todas las Noticias
             </h1>
 
+            <!-- Descripción de la sección -->
             <p>
                 Explora las últimas noticias en tecnología,
                 educación, turismo y negocios.
@@ -25,12 +32,16 @@
 
 </section>
 
+<!-- Contenedor principal de filtros y noticias -->
 <section class="contenedor-principal">
 
+    <!-- Barra lateral de filtros -->
     <aside class="sidebar">
 
+        <!-- Título de categorías -->
         <h3>Categorías</h3>
 
+        <!-- Botón para mostrar todas las noticias -->
         <button
             [class.activa]="categoriaSeleccionada === 'Todas'"
             (click)="filtrar('Todas')">
@@ -39,6 +50,7 @@
 
         </button>
 
+        <!-- Botón para filtrar noticias de tecnología -->
         <button
             [class.activa]="categoriaSeleccionada === 'Tecnología'"
             (click)="filtrar('Tecnología')">
@@ -47,6 +59,7 @@
 
         </button>
 
+        <!-- Botón para filtrar noticias de educación -->
         <button
             [class.activa]="categoriaSeleccionada === 'Educación'"
             (click)="filtrar('Educación')">
@@ -55,6 +68,7 @@
 
         </button>
 
+        <!-- Botón para filtrar noticias de turismo -->
         <button
             [class.activa]="categoriaSeleccionada === 'Turismo'"
             (click)="filtrar('Turismo')">
@@ -63,6 +77,7 @@
 
         </button>
 
+        <!-- Botón para filtrar noticias de negocios -->
         <button
             [class.activa]="categoriaSeleccionada === 'Negocios'"
             (click)="filtrar('Negocios')">
@@ -71,40 +86,51 @@
 
         </button>
 
+        <!-- Separador visual entre grupos de filtros -->
         <hr>
 
+        <!-- Título del filtro por fecha -->
         <h3>Filtrar por fecha</h3>
 
+        <!-- Selector de fechas -->
         <select (change)="filtrarFecha($event)">
 
+            <!-- Opción para mostrar todas las fechas -->
             <option value="Todas">
                 Todas las fechas
             </option>
 
+            <!-- Opción para filtrar noticias de abril -->
             <option value="04">
                 Abril 2025
             </option>
 
+            <!-- Opción para filtrar noticias de mayo -->
             <option value="05">
                 Mayo 2025
             </option>
 
+            <!-- Opción para filtrar noticias de junio -->
             <option value="06">
                 Junio 2025
             </option>
 
+            <!-- Opción para filtrar noticias de julio -->
             <option value="07">
                 Julio 2025
             </option>
 
+            <!-- Opción para filtrar noticias de agosto -->
             <option value="08">
                 Agosto 2025
             </option>
 
+            <!-- Opción para filtrar noticias de septiembre -->
             <option value="09">
                 Septiembre 2025
             </option>
 
+            <!-- Opción para filtrar noticias de octubre -->
             <option value="10">
                 Octubre 2025
             </option>
@@ -113,14 +139,18 @@
 
     </aside>
 
+    <!-- Contenedor principal del listado de noticias -->
     <div class="contenido">
 
+        <!-- Muestra la cantidad de noticias encontradas -->
         <h2>
             Mostrando {{ noticiasFiltradas.length }} noticias
         </h2>
 
+        <!-- Contenedor de tarjetas de noticias -->
         <div class="contenedor-noticias">
 
+            <!-- Renderizado dinámico de cada noticia filtrada -->
             <app-noticia-card
                 *ngFor="let noticia of noticiasFiltradas"
                 [noticia]="noticia">
@@ -132,4 +162,5 @@
 
 </section>
 
+<!-- Componente de pie de página -->
 <app-footer></app-footer>
