@@ -1,12 +1,13 @@
+import { FavoritosComponent } from './../pages/favoritos/favoritos.component';
 import { TestBed } from '@angular/core/testing';
-import { Favoritos } from './favoritos';
+
 
 describe('Favoritos', () => {
-  let service: Favoritos;
+  let service: FavoritosComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(Favoritos);
+    service = TestBed.inject(FavoritosComponent);
   });
 
   it('should be created', () => {
