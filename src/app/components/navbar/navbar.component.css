@@ -1,162 +1,230 @@
+/* Contenedor principal de la barra de navegación */
 .navbar {
 
+    /* Altura fija del navbar */
     height: 120px;
 
+    /* Color de fondo principal */
     background: #012552;
 
+    /* Distribución flexible de los elementos */
     display: flex;
 
+    /* Separación horizontal entre elementos */
     justify-content: space-between;
 
+    /* Centrado vertical de los elementos */
     align-items: center;
 
+    /* Espaciado interno lateral */
     padding: 0 50px;
 
+    /* Sombra inferior para dar profundidad */
     box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 
+/* Contenedor del logo y texto asociado */
 .logo {
 
+    /* Distribución horizontal de elementos */
     display: flex;
 
+    /* Centrado vertical */
     align-items: center;
 
+    /* Separación entre imagen y texto */
     gap: 18px;
 
+    /* Ancho mínimo del bloque */
     min-width: 320px;
 }
 
+/* Imagen del logo */
 .logo img {
 
+    /* Ancho de la imagen */
     width: 130px;
 
+    /* Mantener proporción original */
     height: auto;
 
+    /* Ajuste adecuado de la imagen */
     object-fit: contain;
 }
 
+/* Contenedor de los textos del logo */
 .logo-texto {
 
+    /* Distribución vertical */
     display: flex;
 
+    /* Organización en columna */
     flex-direction: column;
 }
 
+/* Título principal del logo */
 .logo h2 {
 
+    /* Eliminación de márgenes por defecto */
     margin: 0;
 
+    /* Color del texto */
     color: white;
 
+    /* Tamaño de fuente */
     font-size: 34px;
 
+    /* Grosor de la fuente */
     font-weight: 700;
 
+    /* Altura de línea */
     line-height: 1;
 }
 
+/* Resaltado de parte del nombre del logo */
 .logo span {
 
+    /* Color de énfasis */
     color: #ff2d55;
 }
 
+/* Texto secundario del logo */
 .logo small {
 
+    /* Color semitransparente */
     color: rgba(255,255,255,.85);
 
+    /* Tamaño reducido */
     font-size: 15px;
 
+    /* Separación superior */
     margin-top: 4px;
 }
 
+/* Menú principal de navegación */
 .menu {
 
+    /* Distribución horizontal */
     display: flex;
 
+    /* Espacio entre opciones */
     gap: 40px;
 
+    /* Eliminación de viñetas */
     list-style: none;
 
+    /* Eliminación de margen */
     margin: 0;
 
+    /* Eliminación de relleno */
     padding: 0;
 }
 
+/* Elementos individuales del menú */
 .menu li {
 
+    /* Color del texto */
     color: white;
 
+    /* Indicador visual de clic */
     cursor: pointer;
 
+    /* Tamaño de fuente */
     font-size: 18px;
 
+    /* Peso de la fuente */
     font-weight: 600;
 
+    /* Suaviza cambios de estado */
     transition: .3s;
 }
 
+/* Efecto al pasar el cursor sobre una opción */
 .menu li:hover {
 
+    /* Cambio de color de resaltado */
     color: #ff2d55;
 }
 
+/* Campo de búsqueda */
 .buscador input {
 
+    /* Ancho del input */
     width: 320px;
 
+    /* Altura del input */
     height: 52px;
 
+    /* Bordes redondeados */
     border-radius: 30px;
 
+    /* Borde semitransparente */
     border: 1px solid rgba(255,255,255,.25);
 
+    /* Fondo translúcido */
     background: rgba(255,255,255,.18);
 
+    /* Color del texto */
     color: white;
 
+    /* Espaciado interno horizontal */
     padding: 0 22px;
 
+    /* Eliminación del borde de enfoque predeterminado */
     outline: none;
 
-    font-size: 15px;
+    /* Tamaño de fuente */
+    font-size: 16px;
 
+    /* Transición suave */
     transition: .3s;
 }
 
+/* Estilo del texto placeholder */
 .buscador input::placeholder {
 
+    /* Color del texto de ayuda */
     color: rgba(255,255,255,.85);
 }
 
+/* Estilo cuando el input recibe el foco */
 .buscador input:focus {
 
+    /* Cambio de color del borde */
     border-color: #ff2d55;
 
+    /* Fondo ligeramente más visible */
     background: rgba(255,255,255,.25);
 }
 
+/* Adaptación para pantallas medianas */
 @media screen and (max-width: 1200px) {
 
+    /* Reduce el tamaño del logo */
     .logo img {
 
         width: 100px;
     }
 
+    /* Reduce el tamaño del título */
     .logo h2 {
 
         font-size: 28px;
     }
 
+    /* Reduce la separación entre opciones */
     .menu {
 
         gap: 20px;
     }
 
+    /* Ajusta el tamaño del texto del menú */
     .menu li {
 
-        font-size: 15px;
+        font-size: 16px;
     }
 
+    /* Reduce el ancho del buscador */
     .buscador input {
 
         width: 220px;

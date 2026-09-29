@@ -1,194 +1,279 @@
+/* Sección principal del banner */
 .banner {
 
+    /* Altura fija del banner */
     height: 550px;
 
+    /* Imagen de fondo principal */
     background-image: url('/images/banner.png');
+
+    /* Ajusta la imagen para cubrir todo el espacio */
     background-size: cover;
+
+    /* Centra la imagen de fondo */
     background-position: center;
 
+    /* Permite posicionar elementos internos de forma relativa */
     position: relative;
 }
 
+/* Capa superpuesta sobre la imagen del banner */
 .overlay {
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
+
+    /* Ocupa toda la altura del banner */
     height: 100%;
 
+    /* Fondo oscuro semitransparente para mejorar la legibilidad */
     background: rgba(0, 0, 0, 0.45);
 
+    /* Activa flexbox */
     display: flex;
+
+    /* Centra verticalmente el contenido */
     align-items: center;
 }
 
+/* Contenedor principal de textos y botón */
 .contenido {
 
+    /* Margen izquierdo para separar el contenido del borde */
     margin-left: 80px;
 
+    /* Ancho máximo permitido */
     max-width: 650px;
 
+    /* Color general del texto */
     color: white;
 }
 
+/* Etiqueta de bienvenida */
 .etiqueta {
 
+    /* Permite aplicar dimensiones y márgenes */
     display: inline-block;
 
+    /* Color de fondo de la etiqueta */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Texto en negrita */
     font-weight: bold;
 
+    /* Espaciado entre letras */
     letter-spacing: 1px;
 
+    /* Tamaño de fuente */
     font-size: 13px;
 
+    /* Espaciado interno */
     padding: 10px 20px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Separación inferior */
     margin-bottom: 20px;
 }
 
+/* Título principal del banner */
 .contenido h1 {
 
+    /* Tamaño destacado del título */
     font-size: 72px;
 
+    /* Elimina márgenes */
     margin: 0;
 }
 
+/* Resalta una parte del título principal */
 .contenido h1 span {
 
+    /* Color de acento */
     color: #ff2d55;
 }
 
+/* Subtítulo descriptivo */
 .contenido h2 {
 
+    /* Tamaño de fuente */
     font-size: 30px;
 
+    /* Espaciado entre líneas */
     line-height: 1.4;
 
+    /* Margen superior */
     margin-top: 25px;
 
+    /* Margen inferior */
     margin-bottom: 20px;
 }
 
+/* Texto descriptivo principal */
 .contenido p {
 
+    /* Tamaño de fuente */
     font-size: 18px;
 
+    /* Altura de línea */
     line-height: 1.6;
 
+    /* Ancho máximo del párrafo */
     max-width: 550px;
 
+    /* Separación inferior */
     margin-bottom: 30px;
 }
 
+/* Botón principal del banner */
 .contenido button {
 
+    /* Color de fondo */
     background: #ff2d55;
 
+    /* Color del texto */
     color: white;
 
+    /* Elimina el borde por defecto */
     border: none;
 
+    /* Espaciado interno */
     padding: 14px 28px;
 
+    /* Bordes redondeados */
     border-radius: 8px;
 
+    /* Tamaño del texto */
     font-size: 15px;
 
+    /* Grosor del texto */
     font-weight: 600;
 
+    /* Cursor tipo botón */
     cursor: pointer;
 
+    /* Transición suave */
     transition: 0.3s;
 }
 
+/* Efecto al pasar el cursor sobre el botón */
 .contenido button:hover {
 
+    /* Cambio de color de fondo */
     background: #e61e4d;
 
+    /* Desplazamiento visual */
     transform: translateY(-2px);
 }
 
+/* Sección de noticias destacadas */
 .destacadas {
 
+    /* Espaciado interno */
     padding: 60px 30px;
 
+    /* Color de fondo */
     background: #f5f7fa;
 }
 
+/* Contenedor del título de la sección */
 .titulo-section {
 
+    /* Separación inferior respecto al contenido */
     margin-bottom: 40px;
 }
 
+/* Título de la sección de noticias */
 .titulo-section h2 {
 
+    /* Color principal */
     color: #012552;
 
+    /* Tamaño de fuente */
     font-size: 48px;
 
+    /* Grosor de fuente */
     font-weight: 700;
 
+    /* Elimina márgenes */
     margin: 0;
 
+    /* Alineación del texto */
     text-align: left;
 }
 
+/* Contenedor de las tarjetas de noticias */
 .contenedor {
 
+    /* Diseño basado en CSS Grid */
     display: grid;
 
+    /* Cuatro columnas de igual tamaño */
     grid-template-columns: repeat(4, 1fr);
 
+    /* Espacio entre tarjetas */
     gap: 25px;
 
+    /* Ocupa todo el ancho disponible */
     width: 100%;
 }
 
+/* Adaptación para pantallas medianas */
 @media screen and (max-width: 1400px) {
 
+    /* Reduce la cuadrícula a dos columnas */
     .contenedor {
 
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
+/* Adaptación para dispositivos móviles */
 @media screen and (max-width: 768px) {
 
+    /* Ajusta la altura del banner */
     .banner {
 
         height: auto;
+
         min-height: 500px;
     }
 
+    /* Reduce los márgenes del contenido */
     .contenido {
 
         margin: 40px;
     }
 
+    /* Reduce el tamaño del título principal */
     .contenido h1 {
 
         font-size: 48px;
     }
 
+    /* Reduce el tamaño del subtítulo */
     .contenido h2 {
 
         font-size: 24px;
     }
 
+    /* Reduce el espaciado de la sección */
     .destacadas {
 
         padding: 40px 20px;
     }
 
+    /* Reduce el tamaño del título de sección */
     .titulo-section h2 {
 
         font-size: 36px;
     }
 
+    /* Muestra una sola columna en dispositivos móviles */
     .contenedor {
 
         grid-template-columns: 1fr;

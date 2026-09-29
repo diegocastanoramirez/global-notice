@@ -63,7 +63,7 @@
     "autor": "GlobalNotice",
     "fecha": "03/08/2025",
     "imagen": "/images/noticia6.jpg",
-    "destacado": true
+    "destacado": false
   },
   {
     "id": 7,

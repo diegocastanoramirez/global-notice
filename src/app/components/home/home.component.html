@@ -1,30 +1,38 @@
+<!-- Barra de navegación principal -->
 <app-navbar></app-navbar>
 
+<!-- Banner principal de bienvenida -->
 <section class="banner">
 
     <div class="overlay">
 
+        <!-- Contenedor del contenido principal -->
         <div class="contenido">
 
+            <!-- Etiqueta de bienvenida -->
             <span class="etiqueta">
                 BIENVENIDO A
             </span>
 
+            <!-- Título principal de la plataforma -->
             <h1>
                 Global<span>Notice</span>
             </h1>
 
-                <h2>
-                    Las noticias que conectan
-                    el mundo contigo
-                </h2>
+            <!-- Subtítulo descriptivo -->
+            <h2>
+                Las noticias que conectan
+                el mundo contigo
+            </h2>
 
+            <!-- Descripción introductoria -->
             <p>
                 Tecnología, educación, turismo y negocios en un solo lugar.
                 Mantente informado con las últimas noticias y descubre
                 nuevas oportunidades..
             </p>
 
+            <!-- Botón para explorar noticias -->
             <button>
                 Explorar Noticias
             </button>
@@ -35,8 +43,10 @@
 
 </section>
 
+<!-- Sección de noticias destacadas -->
 <section class="destacadas">
 
+    <!-- Título de la sección -->
     <div class="titulo-section">
 
         <h2>
@@ -45,7 +55,10 @@
 
     </div>
 
+    <!-- Contenedor de tarjetas de noticias -->
     <div class="contenedor">
+
+        <!-- Renderizado dinámico de noticias destacadas -->
         <app-noticia-card
             *ngFor="let noticia of noticias"
             [noticia]="noticia">
@@ -55,4 +68,5 @@
 
 </section>
 
+<!-- Pie de página de la aplicación -->
 <app-footer></app-footer>
